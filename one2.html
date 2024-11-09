@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="two2.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">Train Booking</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#booking">Book a Ticket</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#gallery">Image Gallery</a></li>
+                <li><a href="#todo">To-Do List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Travel in Comfort, Book Your Train Tickets</h1>
+        <p>Plan your next journey with ease and comfort. Book your train tickets now.</p>
+        <a href="#booking" class="cta-btn">Book Now</a>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="booking-section">
+        <h2>Book Your Train Ticket</h2>
+        <form id="bookingForm" action="submit_booking.php" method="POST">
+            <label for="departure">Departure Station:</label>
+            <input type="text" id="departure" name="departure" required>
+
+            <label for="arrival">Arrival Station:</label>
+            <input type="text" id="arrival" name="arrival" required>
+
+            <label for="departureDate">Departure Date:</label>
+            <input type="date" id="departureDate" name="departureDate" required>
+
+            <label for="ticketType">Ticket Type:</label>
+            <select id="ticketType" name="ticketType" required>
+                <option value="">Select a Ticket Type</option>
+                <option value="one-way">One-Way</option>
+                <option value="round-trip">Round Trip</option>
+            </select>
+
+
+            <button type="submit" class="btn">Book Now</button>
+		
+  <div id="confirmationMessage" style="display:none; color: green; font-weight: bold;">
+    Booking Submitted Successfully!
+</div>
+        </form>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="submit_contact.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="gallery-section">
+        <h2>Explore Our Beautiful Trains</h2>
+        <div id="galleryContainer">
+
+             <!-- More train-related images -->
+		 <img class="img" src=" express.jpg" alt="Express Train">
+            
+	       <img class="img" src=" Mountainn.jfif" alt="Mountain Train">
+            <img src=" Speed.jfif" alt="Speed Train">
+            
+           
+           <img src="0ldtrain" alt="Old Train">
+           
+            <img src=" Bullet.jfif" alt="Bullet Train">
+            
+            <img src="modern.jfif" alt="modern Train">
+		 
+            
+            
+            
+            
+        </div>
+        <input type="url" id="imageUrlInput" placeholder="Enter image URL" />
+        <button id="addImageBtn" class="btn">Add Image</button>
+    </section>
+
+    <!-- To-Do List -->
+    <section id="todo" class="todo-section">
+        <h2>To-Do List</h2>
+        <input type="text" id="todoInput" placeholder="Add a new task" />
+        <button id="addTodoBtn" class="btn">Add Task</button>
+        <ul id="todoList"></ul>
+    </section>
+
+    <script src="three2.js"></script>
+</body>
+</html>
